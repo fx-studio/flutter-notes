@@ -15,7 +15,9 @@ Chúng ta sẽ bỏ qua mọi thứ linh tinh, như: *"Dart là gì?"*... Mà s�
 ## Danh sách
 
 1. [Hello world](./01_helloworld.md)
-2. ...
+2. [Expressions](./02_expressions.md)
+3. [Variables & Constants](./03_variables.md)
+4. ...
 
 ---
 

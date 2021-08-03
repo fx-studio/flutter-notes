@@ -66,7 +66,9 @@ Về Flutter, bạn sẽ rất thoải mái khi chúng tương tích với khá 
 ### [Dart Tour](./000-Dart)
 
 1. [Hello world](./000-Dart/01_helloworld.md)
-2. ...
+2. [Expressions](./000-Dart/02_expressions.md)
+3. [Variables & Constants](./000-Dart/03_variables.md)
+4. ...
 
 ### Part I: ...
 
