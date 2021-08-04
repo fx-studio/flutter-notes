@@ -68,7 +68,9 @@ Về Flutter, bạn sẽ rất thoải mái khi chúng tương tích với khá 
 1. [Hello world](./000-Dart/01_helloworld.md)
 2. [Expressions](./000-Dart/02_expressions.md)
 3. [Variables & Constants](./000-Dart/03_variables.md)
-4. ...
+4. [Type & Operations](./000-Dart/04_type_operations.md)
+5. [Control Flow](./000-Dart/05_ControlFlow.md)
+6. ...
 
 ### Part I: ...
 
