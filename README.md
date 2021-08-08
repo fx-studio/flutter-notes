@@ -71,7 +71,8 @@ Về Flutter, bạn sẽ rất thoải mái khi chúng tương tích với khá 
 4. [Type & Operations](./000-Dart/04_type_operations.md)
 5. [Control Flow](./000-Dart/05_ControlFlow.md)
 6. [Functions](./000-Dart/06_functions.md)
-7. ...
+7. [Class](./000-Dart/07_class.md)
+8. ...
 
 ### Part I: ...
 

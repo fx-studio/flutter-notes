@@ -20,7 +20,8 @@ Chúng ta sẽ bỏ qua mọi thứ linh tinh, như: *"Dart là gì?"*... Mà s�
 4. [Type & Operations](./04_type_operations.md)
 5. [Control Flow](./05_ControlFlow.md)
 6. [Functions](./06_functions.md)
-7. ...
+7. [Class](./07_class.md)
+8. ...
 
 ---
 
