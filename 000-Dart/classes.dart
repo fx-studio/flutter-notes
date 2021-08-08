@@ -2,6 +2,11 @@ void main() {
   print('Hello, Dart! I am Fx Studio');
 
   final user = User(id: 22, name: 'Fx');
+  print(user);
+  user.id = 999;
+  user.name = 'Fx Studio';
+  print(user.id);
+  print(user.name);
 
   // final user2 = User(id: 23, name: 'Fx')
   //   ..id = 23
@@ -70,6 +75,15 @@ class User {
 
   int _id;
   String _name;
+
+  int get id => _id;
+  set id(int value) => _id = value;
+
+  String get name {
+    return _name.toUpperCase();
+  }
+
+  set name(String value) => _name = value;
 
   @override
   String toString() {

@@ -631,9 +631,216 @@ Hoặc ta có thể một hàm khởi tạo định danh bình thường như sa
 
 Nhưng mà bạn không nên dùng kiểu này, với **factory** thì có lợi thế hơn **constructor** là bạn có thể kiểm tra nhiều giá trị hay nhiều kiểu hơn khi tạo một đối tượng. Ví dụ như tồn tại hay không. Đó là lợi điểm của **factory** mang lại.
 
+## Object
+
+Object là các thể hiện tham chiếu được sinh ra từ lớp và tồn tại trong bộ nhớ. Bạn có thể gán một đối tượng này cho một đối tượng khác. Sẽ tạo thêm một tham chiếu tới vùng nhớ, không tạo thêm một thể hiện mới nào.
+
+Ví dụ:
+
+```dart
+class MyClass {
+  var myProperty = 1;
+}
+```
+
+Ta sẽ có 2 đối tượng như sau:
+
+```dart
+final obj1 = MyClass();
+final obj2 = obj1;
+```
+
+Cả 2 đều trỏ tới 1 vùng nhớ, nên một đối tượng này thay đổi giá trị thuộc tính. Thì cũng ảnh hưởng sang đối tượng kia.
+
+Ví dụ:
+
+```dart
+print(myObject.myProperty);    // 1
+anotherObject.myProperty = 2;
+print(myObject.myProperty);    // 2
+```
+
+## Getters & Setters
+
+Lớp User của chúng ta hiện tại như sau:
+
+```dart
+class User {
+  // ...
+  final int _id;
+  final String _name;
+  // ...
+}
+```
+
+Với private cho các thuộc tính thì bên ngoài sẽ không tài nào truy cập hay thay đổi giá trị của chúng. Tuy nhiên, để lớp chúng ta trở nên thân thiện hơn thì chúng ta sẽ thêm các **Getters & Setters** cho lớp. Điều này giúp cho bạn quản lý và xử lý được các giá trị trước khi gán chúng vào thuộc tính.
+
+Ví dụ code như sau:
+
+```dart
+  int _id;
+  String _name;
+
+  int get id => _id;
+  set id(int value) => _id = value;
+
+  String get name => _name;
+  set name(String value) => _name = value;
+```
+
+Trong đó:
+
+* Sử dụng `get` cho các Getters & `set` cho các Setter
+* `=>` dùng để rút gọn function 1 dòng
+
+Ngoài ra, tác dụng lớn nhất của Getters & Setter là xử lý tiền dữ liệu trước khi sử dụng. Bạn sẽ tính toán trước và trả về sau. Ví dụ code sau:
+
+```dart
+  String get name {
+    return _name.toUpperCase();
+  }
+```
+
+Bạn sẽ trả về `name` bằng cách in hoa tất cả kí tự của `_name` property trong lớp.
+
+## Static members
+
+Chúng ta sẽ tạo nên các thành viên tĩnh với từ khoá là `static` cho lớp trong Dart. Các thành viên tĩnh sẽ là:
+
+* Thuộc tính 
+* Phương thức
+
+Ta có ví dụ như sau:
+
+```dart
+class SomeClass {
+  static int myProperty = 0;
+  static void myMethod() {
+    print('Hello, Dart!');
+  }
+}
+```
+
+Truy cập vào các thuộc tính hay phương thức tĩnh này thì dùng chính tên lớp để truy cập. Ví dụ cách sử dụng như sau:
+
+```dart
+final value = SomeClass.myProperty;
+SomeClass.myMethod();
+```
+
+Với các thành viên tĩnh này, bạn không cần tạo ra các đối tượng của lớp để thực hiện truy cập.
+
+Ngoài ra, các biến tĩnh cũng phụ thuộc vào phạm vi của chúng mà sẽ có các tiên gọi khác nhau:
+
+* Biến static thuộc về lớp, gọi là class variables
+* Các biến non-static gọi là các instance variables
+* Các biến trong một method gọi là local variables
+* Các biến ở ngoài class được gọi là global variables
+
+Trong class, chúng ta có thể kết hợp cả `static` & `const` cho các thuộc tính. Ví dụ:
+
+```dart
+static const _anonymousId = 0;
+static const _anonymousName = 'anonymous';
+```
+
+## **Singleton pattern**
+
+Ví dụ và ứng dụng lớn nhất cho hội đồng `static` đó chính là **Singleton pattern**. Một mẫu design pattern được xem là quốc dân trong giới lập trình. Bạn sẽ có một đối tượng dùng cho toàn bộ chương trình và lưu trữ dữ liệu tập trung.
+
+Cách tạo một Singleton cơ bản như sau:
+
+```dart
+class MySingleton {
+  MySingleton._();
+  static final MySingleton instance = MySingleton._();
+}
+```
+
+Trong đó, `MySingleton._()` là một hàm khởi tạo có định danh ở chế độ riêng tư. Để nhấn mạnh việc nó không thể khởi tạo hay gọi từ bên ngoài. Dấu `_` làm cho không thể khởi tạo lớp một cách bình thường. Tuy nhiên, thuộc tính static, chỉ được khởi tạo một lần, cung cấp một tham chiếu đến đối tượng được khởi tạo.
+
+Cách sử dụng thì như sau:
+
+```dart
+   final mySingleton = MySingleton.instance;
+```
+
+> `mySingleton` sẽ là tham chiếu tới biến `static` kia thôi, không có thể hiện nào mới tạo ra.
+
+Hoặc bạn có một cách khác để tạo Singleton theo kiểu `factory`. Xem ví dụ nha:
+
+```dart
+class MySingleton {
+  MySingleton._();
+  static final MySingleton _instance = MySingleton._();
+  factory MySingleton() => _instance;
+}
+```
+
+Trong đó, `factory` không thực sự tạo ra một đối tượng, nó chỉ trả về `_instance`. Hay trả về chính đối tượng Singleton mà thôi. Xem luôn ví dụ cách dùng của nó thì như sau:
+
+```dart
+final mySingleton = MySingleton();
+```
+
+Bây giờ, nó trông ổn rồi chứ. Ahihi!
+
+## **Static methods**
+
+Cũng có nhiều điều thú vị về các phương thức tĩnh trong các lớp của ngôn ngữ Dart. Cũng tương tự như với các biến, chúng ta vẫn dùng từ khoá `static` trước khai báo các function. Và dùng tên của lớp đệ gọi tới các phương thức đó.
+
+Ví dụ code cho một phương thức tĩnh như sau:
+
+```dart
+ static User fromJson(Map<String, Object> json) {
+  final userId = json['id'] as int;
+  final userName = json['name'] as String;
+  return User(id: userId, name: userName);
+}
+
+final map = {'id': 10, 'name': 'Sasuke'};
+final sasuke = User.fromJson(map);
+```
+
+Bạn chỉ cần chú ý vào `static` và `User.fromJson(map);` mà thôi. Nó cũng tương tự như với `factory` .
+
+Tuy nhiên, về mặt ý nghĩa thì ta sẽ có 2 công dụng cho các phương thức tĩnh:
+
+* **Utility methods** : tạo ra các hàm phụ trợ cho lớp. Hoặc nhóm các hàm phụ trợ lại vào 1 trong lớp. Ví dụ, nhiều bạn thích có một class gọi là Helper hay Common để chứa các hàm hay dùng như: trim(), convert ....
+* **Creating new objects** : các phương thức sinh ra các đối tượng mới. Thường sẽ là các dummy data là chính. Vì chúng ta đã có các hàm constructors và factory làm việc này khá tốt rồi. Ví dụ như ở trên kìa.
+
+### Static Method vs. Factory Constructor
+
+* Thứ được trả về:
+  * Factory sẽ trả về một đối tượng của lớp
+  * Static có thể trả về bất cứ thứ gì. Từ các đối tượng tới các loại dữ liệu khác nhau
+* Đặt tên
+  * Factory thì sẽ không thoái mái trong việc đặc tên cho phương thức. Khi phải có tên Class nhằm tuân thủ quy định này. Và trông giống như một hàm khởi tạo bình thường.
+  * Static thì bạn cứ vô tư đi nhoé
+* Const (có hữu ý với Flutter sau này nhoé)
+  * Factory có thể là một `const` nếu nó forwarding constructor
+  * Static thì không thể làm được này
+
+
+
+> Bài dài và mệt quá xá. Bạn đọc được tới đây cũng là một kì tích rồi. Cảm ơn bạn đã đọc và chúc bạn thành công. Ahuhu!
+
 ## Tạm kết
 
 Đúng là toàn tư về Class trong Dart, tuy nhiên chúng mới là một nữa câu chuyện mà thôi. Bạn sẽ còn gặp lại chúng trong phần hướng đối tượng. Khi chúng ta tiếp tục khám phá thêm các tính chất khác của các Class trong Dart và lập trình hướng đối tượng.
+
+Để chốt lại thì bạn chỉ cần nhở tới ví dụ này là đủ:
+
+```dart
+const User(this.id, this.name);
+```
+
+Đó bao gồm: 
+
+* **non-forwarding** (không chuyển tiếp)
+* **unnamed** (không tên tham số)
+* **generative** (khởi tạo bình thường)
+* **const constructor** (khởi tạo hằng số)
 
 ---
 
