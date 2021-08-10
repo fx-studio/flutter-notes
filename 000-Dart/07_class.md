@@ -829,7 +829,7 @@ Tuy nhiên, về mặt ý nghĩa thì ta sẽ có 2 công dụng cho các phươ
 
 Đúng là toàn tư về Class trong Dart, tuy nhiên chúng mới là một nữa câu chuyện mà thôi. Bạn sẽ còn gặp lại chúng trong phần hướng đối tượng. Khi chúng ta tiếp tục khám phá thêm các tính chất khác của các Class trong Dart và lập trình hướng đối tượng.
 
-Để chốt lại thì bạn chỉ cần nhở tới ví dụ này là đủ:
+Để chốt lại thì bạn chỉ cần nhớ tới ví dụ này là đủ:
 
 ```dart
 const User(this.id, this.name);
@@ -841,6 +841,70 @@ const User(this.id, this.name);
 * **unnamed** (không tên tham số)
 * **generative** (khởi tạo bình thường)
 * **const constructor** (khởi tạo hằng số)
+
+Tóm tắt, khi khai báo một class nhoé.
+
+1. Bắt đầu khai báo
+
+```dart
+class User {
+  String name;
+}
+```
+
+2. Cung cấp giá trị cho thuộc tính
+
+```dart
+class User {
+  String name = 'anonymous';
+}
+```
+
+3. Sử dụng hàm khởi tạo
+
+```dart
+class User {
+  User(this.name);
+  String name;
+}
+```
+
+4. Sử dụng initializer list cho private properties
+
+```dart
+class User {
+  User(String name)
+    : _name = name;
+  String _name;
+}
+```
+
+5. Default value cho hàm khởi tạo theo 2 cách
+
+```dart
+class User {
+  User([this.name = 'anonymous']);
+  String name;
+}
+
+// or
+
+class User {
+  User({this.name = 'anonymous'});
+  String name;
+}
+```
+
+6. Yêu cầu có named parameters cho hàm khởi tạo
+
+```dart
+class User {
+  User({required this.name});
+  String name;
+}
+```
+
+
 
 ---
 
