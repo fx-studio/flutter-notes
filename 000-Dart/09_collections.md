@@ -728,7 +728,7 @@ Nếu bạn tinh ý thì sẽ thấy khi `print` lại có 2 kiểu khác nhau, 
 
 Thường thì Iterable được tạo ra, liên kết với một loại kiểu dữ liệu tập hợp khác như List, Map ... Từ Iterable bạn có thể chuyển đổng sang List & Set thông qua các toán tử `.toList()` & `.toSet()`
 
-#### Filtering
+### Filtering
 
 Tiếp theo, bạn có thể lặp và lọc một tập hợp để thu lại được một tập hợp nhỏ hơn. Chúng ta sử dụng toán tử `where`. Cách dùng cũng tương tự như `map`. Nhưng nó sẽ cho phép các phần tử có thể được thêm vào tập hợp mới, nếu thoải mãn được một điều kiện nào đó.
 
@@ -744,7 +744,7 @@ Trong đó:
 * Kết quả trả về là một tập hợp kiểu **Iterable**
 * Điều kiện lọc ở đây là `.isEven` tức là lặp ra các phần tử chẵn từ list `squares`
 
-#### reduce
+### reduce
 
 Đây được xem là toán tử hợp nhất. Khi bạn muốn tính toán dựa trên toàn bộ số phần tử của tập hợp. Ví dụ: tính tổng các phần tử trong tập hợp. Bạn có thể tuỳ ý thực hiện việc tính toán hoặc hợp nhất theo một quy luật nào đó mà bạn nghĩ ra.
 
@@ -761,7 +761,7 @@ Trong đó:
 * Cứ mỗi bước lặp thì `sum` sẽ được cộng thêm `element` vào.
 * Sau đó `sum` sẽ gán lại cho `sum` ở bước lặp tiếp theo
 
-#### fold
+### fold
 
 Đây là toán tử tối ưu hơn `reduce`, nếu trong trường hợp danh sách rỗng thì bạn sẽ gặp lỗi. Và `fold` sẽ bắt bạn cung cấp giá trị ban đầu khi thực hiện công việc hợp nhất này.
 
@@ -780,7 +780,7 @@ Trong đó:
 * `0` sẽ được gán cho `sum` trong lần chạy đầu tiên
 * Các lần chạy tiếp theo thì lệnh `fold` tương tự như `reduce`
 
-#### Sorting
+### Sorting
 
 **Sorting** (sắp xếp) được xem là một trong những toán tử kinh điển của mọi thời đại. Quy luật sắp xếp sẽ dựa trên kiểu dữ liệu của tập hợp mà quyết định. Quan trọng là việc sắp xếp vẫn thực hiện trên chính tập hợp đó, nó sẽ thay đổi thứ tự các phần tử. Và nếu bạn áp dụng chon `const` thì sẽ gặp lỗi.
 
@@ -794,7 +794,7 @@ print(chars); //[A, B, C, D, E, H, O, X, Z]
 
 Ví dụ này cũng khá là đơn giản và không có gì phức tạp hết. Danh sách của bạn sẽ được làm lại một cách xinh đẹp với thứ tự sắp xếp theo chữ cái tăng dần.
 
-#### Custom sort
+### Custom sort
 
 Nếu bạn muốn áp dụng một quy luật khác thì có thể sử dụng **custom sort**, thực chất đây là bạn chọn tham số và tạo ra quy luật cho toán tử `sort` ở trên mà thôi.
 
@@ -814,7 +814,7 @@ Trong đó:
 
 > Nếu có điều kiện thì chúng ta sẽ tìm hiểu các tham số hay các cách để bạn thực hiện so sánh sau nhoé.
 
-#### Reversing
+### Reversing
 
 Bạn có cách đơn giản hơn để đão ngược lại danh sách của bạn. Đó chính là toán tử `.reversed`. Thật là may mắn khi bạn có được một tập hợp mới sau khi gọi toán tử đó.
 
@@ -832,7 +832,7 @@ print(chartsReversed);
 
 Kiểu dữ liệu cho tập hợp trả về bởi toán tử `.reversed` là một kiểu **Iterable**.
 
-#### Combining
+### Combining
 
 Cuối cùng, bạn có thể kết hợp nhiều toán tử **the higher order methods** với nhau. Tương tự như thế giới Rx hay Combine à. Kết quả của toán tử này là đầu vào của toán tử tiếp theo. Bạn sẽ gọi liên tiếp thông qua các dấu `.`.
 
