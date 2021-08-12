@@ -73,7 +73,8 @@ Về Flutter, bạn sẽ rất thoải mái khi chúng tương tích với khá 
 6. [Functions](./000-Dart/06_functions.md)
 7. [Class](./000-Dart/07_class.md)
 8. [Nullability](./000-Dart/08_nullability.md)
-9. ...
+9. [Collections](./000-Dart/09_collections.md)
+10. ...
 
 ### Part I: ...
 

@@ -22,7 +22,8 @@ Chúng ta sẽ bỏ qua mọi thứ linh tinh, như: *"Dart là gì?"*... Mà s�
 6. [Functions](./06_functions.md)
 7. [Class](./07_class.md)
 8. [Nullability](./08_nullability.md)
-9. ...
+9. [Collections](./09_collections.md)
+10. ...
 
 ---
 
