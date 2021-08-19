@@ -24,7 +24,7 @@ Chúng ta sẽ bỏ qua mọi thứ linh tinh, như: *"Dart là gì?"*... Mà s�
 8. [Nullability](./08_nullability.md)
 9. [Collections](./09_collections.md)
 10. [OOP](./10_OOP.md)
-11. 
+11. [Asynchronous](./11_async.md)
 
 ---
 

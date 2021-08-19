@@ -75,7 +75,7 @@ Về Flutter, bạn sẽ rất thoải mái khi chúng tương tích với khá 
 8. [Nullability](./000-Dart/08_nullability.md)
 9. [Collections](./000-Dart/09_collections.md)
 10. [OOP](./000-Dart/10_OOP.md)
-11. ...
+11. [Asynchronous](./000-Dart/11_async.md)
 
 ### Part I: ...
 
