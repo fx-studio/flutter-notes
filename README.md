@@ -77,7 +77,13 @@ Về Flutter, bạn sẽ rất thoải mái khi chúng tương tích với khá 
 10. [OOP](./000-Dart/10_OOP.md)
 11. [Asynchronous](./000-Dart/11_async.md)
 
-### Part I: ...
+### Part I: The First App
+
+1. [Giới thiệu](./001-TheFirstApp/01_GioiThieu.md)
+2. [Cài đặt](./001-TheFirstApp/02_CaiDat.md)
+3. [Create a new App](./001-TheFirstApp/03_CreateNewApp.md)
+
+
 
 ---
 
