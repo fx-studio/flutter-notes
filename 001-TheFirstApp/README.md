@@ -29,7 +29,8 @@ Bạn sẽ hoàn thiện Flutter một cách từ từ qua từng chương. Ho�
 
 1. [Giới thiệu](./01_GioiThieu.md)
 2. [Cài đặt](./02_CaiDat.md)
-3. [Create a new App](./03_CreateNewApp.md)
+3. [The first Flutter App](./03_CreateNewApp.md)
+4. Make color App
 
 ---
 

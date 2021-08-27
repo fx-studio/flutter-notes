@@ -81,7 +81,8 @@ Về Flutter, bạn sẽ rất thoải mái khi chúng tương tích với khá 
 
 1. [Giới thiệu](./001-TheFirstApp/01_GioiThieu.md)
 2. [Cài đặt](./001-TheFirstApp/02_CaiDat.md)
-3. [Create a new App](./001-TheFirstApp/03_CreateNewApp.md)
+3. [The first Flutter app](./001-TheFirstApp/03_CreateNewApp.md)
+4. Make color app
 
 
 
