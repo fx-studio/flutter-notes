@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hello_flutter/counter_page.dart';
 import 'package:hello_flutter/home_page.dart';
+import 'package:hello_flutter/menu_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: CounterPage()
+      home: MenuPage()
     );
   }
 }

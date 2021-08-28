@@ -77,12 +77,12 @@ Về Flutter, bạn sẽ rất thoải mái khi chúng tương tích với khá 
 10. [OOP](./000-Dart/10_OOP.md)
 11. [Asynchronous](./000-Dart/11_async.md)
 
-### Part I: The First App
+### [Part I: The First App](./001-TheFirstApp)
 
 1. [Giới thiệu](./001-TheFirstApp/01_GioiThieu.md)
 2. [Cài đặt](./001-TheFirstApp/02_CaiDat.md)
 3. [The first Flutter app](./001-TheFirstApp/03_CreateNewApp.md)
-4. Make color app
+4. [Make color app](./001-TheFirstApp/04_MakeColorApp.md)
 
 
 

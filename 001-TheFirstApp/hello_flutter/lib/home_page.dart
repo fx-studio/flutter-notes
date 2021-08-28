@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
         title: Text("Home"),
       ),
       body: new Center(
-        child: Text("Home Page"),
+        child: Image.asset('assets/images/img_2_01.jpeg'),
       ),
     );
   }

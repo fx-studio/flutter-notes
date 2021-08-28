@@ -30,8 +30,9 @@ Bạn sẽ hoàn thiện Flutter một cách từ từ qua từng chương. Ho�
 1. [Giới thiệu](./01_GioiThieu.md)
 2. [Cài đặt](./02_CaiDat.md)
 3. [The first Flutter App](./03_CreateNewApp.md)
-4. Make color App
+4. [Make color App](./04_MakeColorApp.md)
 
 ---
 
 Cảm ơn bạn đã theo dõi các bài viết từ **Fx Studio** & hãy truy cập [website](https://fxstudio.dev/) để cập nhật nhiều hơn!
+
